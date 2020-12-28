@@ -6,7 +6,10 @@ html {
 
   @media (min-width: 768px) {
     html {
-      font-size: 16px;
+      font-size: 16px !important;
+    }
+    .title {
+        font-size: 16px !important;
     }
   }
   
@@ -32,10 +35,14 @@ margin-bottom: 35px !important;
 
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.1); }
+.box-shadow { box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5); }
 
 .transparent_card {
     background:rgba(255, 255, 255, 0.28) !important
+}
+
+.bg_white {
+    background:rgba(255, 255, 255, 0.486) !important
 }
 
 .card_basic {
