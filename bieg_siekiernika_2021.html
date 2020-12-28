@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <link href="main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -12,81 +13,17 @@
 </head>
 <style>
     body {
-        background-image: url('photo/bg1.jpg');
-        background-repeat: no-repeat;
+        background-image: url('photo/bg2.jpg');
         background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-bottom: 100px;
     }
-
-    .animated {
-        padding-top: 95px;
-        margin-bottom: 60px;
-        -webkit-animation-duration: 3s;
-        animation-duration: 3s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-    }
-
-    @-webkit-keyframes fadeInRight {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateX(20px);
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: translateX(0);
-        }
-    }
-
-    @keyframes fadeInRight {
-        0% {
-            opacity: 0;
-            transform: translateX(20px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .fadeInRight {
-        -webkit-animation-name: fadeInRight;
-        animation-name: fadeInRight;
-    }
-
-    html {
-    font-size: 14px;
-  }
-  
-  @media (min-width: 768px) {
-    html {
-      font-size: 16px;
-    }
-  }
-  
-  .container {
-    max-width: 960px;
-  }
-  
-  .pricing-header {
-    max-width: 700px;
-  }
-  
-  .card-deck .card {
-    min-width: 220px;
-  }
-  
-  .border-top { border-top: 1px solid #e5e5e5; }
-  .border-bottom { border-bottom: 1px solid #e5e5e5; }
-  
-  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
 </style>
 
 <body>
     <div class="box-shadow" style=" box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05) !important;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-2 my-lg-0 ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-2 my-lg-0 " style=" margin-top: 0px !important">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -97,8 +34,8 @@
                         <a class="nav-link" href="index.html">Strona Główna <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             Bieg siekiernika
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -115,8 +52,8 @@
                         <a class="nav-link" href="galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             O Nas
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -134,18 +71,124 @@
         </nav>
     </div>
     <div class="container">
-        
 
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
-        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-        crossorigin="anonymous"></script>
+        <div class="card-deck mb-3 text-center mt-10 no_bg">
+            <div class="card mb-4 no_bg transparent_card box-shadow">
+                <div class="card-header">
+                    <h4 class="title">Do Biegu Siekiernika 2020 pozostało</h4>
+                </div>
+                <p class="timer" id="demo"></p>
+            </div>
+
+        </div>
+
+        <div class="sign_in div_margin_vertic box-shadow">
+            <a class="sign_in_Button" href="https://chronotex.pl/zawody/"
+                style="text-decoration: none !important; color: white;"><button type="button"
+                    class="btn btn-danger title">ZAPISZ SIĘ JUŻ DZIŚ</button></a>
+        </div>
+
+        <div class="card-deck mb-3 text-center box-shadow    mt-10 div_margin_vertic">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="photo/plakat2021.jpg" alt="Card image cap">
+            </div>
+        </div>
+
+        <div class="sign_in div_margin_vertic box-shadow" style="width: 100%;">
+            <a class="sign_in_Button"
+                href="https://gosir.kroscienkowyzne.pl/sekcja-lekkiej-atletyki/n,xiv-bieg-dycha-siekiernika"
+                style="text-decoration: none !important; color: white;"><button type="button"
+                    class="btn btn-danger title">Więcej informacji znajdziesz tutaj</button></a>
+        </div>
+
+        <div class="card-deck mb-3 text-center mt-10 no_bg">
+            <div class="card mb-4 no_bg transparent_card box-shadow">
+                <div class="card-header">
+                    <h4 class="title">Nasza trasa</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck mb-3 text-center box-shadow    mt-10 div_margin_vertic" style="    width: 500px;
+        margin: auto;" >
+            <div class="card mb-4 box-shadow" >
+                <img class="card-img-top" src="photo/2021map.jpg" alt="Card image cap">
+            </div>
+        </div>
+
+        <div class="card-deck mb-3 text-center mt-10 no_bg">
+            <div class="card mb-4 no_bg transparent_card box-shadow">
+                <div class="card-header">
+                    <h4 class="title">Medale z poprzednich edycji</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck mb-3 text-center mt-10">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="photo/medal1.jpg" alt="Card image cap">
+            </div>
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="photo/medal2.png" style="height: 100%;" alt="Card image cap">
+            </div>
+        </div>
+
+
+        <div class="card-deck mb-3 text-center mt-10 no_bg">
+            <div class="card mb-4 no_bg transparent_card box-shadow">
+                <div class="card-header">
+                    <h4 class="title">Gdzie odbędzie się wydarzenie? - Za GOOGLE Maps sie jak chcesz sobei tak o dodać do strony. Stąd ten błąd</h4>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+
+
+
+
+        <script>
+            function initMap() {
+                const uluru = { lat: -25.344, lng: 131.036 };
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 4,
+                    center: uluru,
+                });
+                const marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                });
+            }
+
+
+            var countDownDate = new Date("Aug 30, 2021 15:37:25").getTime();
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+            defer></script>
 </body>
 
 </html>
