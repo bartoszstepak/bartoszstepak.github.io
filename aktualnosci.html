@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 </head>
 <style>
     body {
@@ -57,32 +56,38 @@
     }
 
     html {
-    font-size: 14px;
-  }
-  
-  @media (min-width: 768px) {
-    html {
-      font-size: 16px;
+        font-size: 14px;
     }
-  }
-  
-  .container {
-    max-width: 960px;
-  }
-  
-  .pricing-header {
-    max-width: 700px;
-  }
-  
-  .card-deck .card {
-    min-width: 220px;
-  }
-  
-  .border-top { border-top: 1px solid #e5e5e5; }
-  .border-bottom { border-bottom: 1px solid #e5e5e5; }
-  
-  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
+    @media (min-width: 768px) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .pricing-header {
+        max-width: 700px;
+    }
+
+    .card-deck .card {
+        min-width: 220px;
+    }
+
+    .border-top {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow {
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
 </style>
 
 <body>
@@ -98,8 +103,8 @@
                         <a class="nav-link" href="index.html">Strona Główna <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             Bieg siekiernika
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -116,8 +121,8 @@
                         <a class="nav-link" href="galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             O Nas
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -134,10 +139,207 @@
             </div>
         </nav>
     </div>
+
+
+
     <div class="container">
+        <div class="card-deck mb-3 text-center mt-10 no_bg">
+            <div class="card mb-4 transparent_card box-shadow">
+                <div class="card-header">
+                    <h4 id="pageTitle" class="title">Aktualności</h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="news">
+            <div id="sidebar" class="sidebar">
+
+                <div class="card-deck mb-3 text-center mt-10 no_bg " style="width: 90%; color: white;">
+                    <div class="card mb-4 transparent_card box-shadow">
+                        <div class="card-header" style="  list-style-type: none;
+                        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.76) !important;">
+                            <h3 onclick="location.href='aktualnosci.html';" style="cursor: pointer;">Njanowsze posty</h3>
+                            <h3 style=" text-align: center;">Archiwum</h3>
+                            <ul class="list-unstyled" style=" text-align: center;">
+                                <li onclick="getNewsByMonth(202101)">Styczeń 2021</li>
+                                <li onclick="getNewsByMonth(202012)">Grudzień 2020</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div id="news" class="news-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>;
+    <script>
+
+       
+        var news = [
+            {
+                id: 1
+                ,title: "Fajnie sobie stoimy i bedzimy biegać"
+                , content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore"
+                , date: "12.12.2020"
+                , archiwID: 202101
+                , photo: "s2.jpg"
+                , coments: [
+                    {
+                        nick: "Man1"
+                        , date: "12.12.2020"
+                        , content: "Elo 123"
+                    }
+                ]
+            },
+            {
+                id: 1
+                ,title: "Czasem pijemy też wódkę"
+                , content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore"
+                , date: "12.12.2020"
+                , archiwID: 202101
+                , photo: "s1.jpg"
+                , coments: [
+                    {
+                        nick: "Man1"
+                        , date: "12.12.2020"
+                        , content: "Elo 123"
+                    }
+                ]
+            },
+            {
+                id: 3
+                ,title: "Nowy rok niedługo"
+                , content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore"
+                , date: "12.12.2020"
+                , archiwID: 202012
+                , photo: "s2.jpg"
+                , coments: [
+                    {
+                        nick: "Man1"
+                        , date: "12.12.2020"
+                        , content: "Elo 123"
+                    }
+                ]
+            },
+        ]
+
+        function getNewsByMonth(id) {
+            var archive = news.map(function (o) {
+                if (o.archiwID === id) {
+                    return `
+                    <div class="card mb-4 box-shadow" style="cursor: pointer;">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal"> ${o.title}</h4>
+                    </div>
+                    <div class="news-card-body" style="display: flex;">
+                        <div class="news-photo">
+                            <img src="photo/${o.photo}" alt="Card image cap">
+                        </div>
+                        <div class="news-content" style="display:block;">
+                            <p class="p-loc">${o.content}</p>
+                            <span class="p-desc">dodano: ${o.date}</span>
+                        </div>
+
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
+                        więcej
+                        </button>
+                        
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">${o.title}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="photo/${o.photo}" alt="Card image cap">
+                                ${o.content}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">zamknij</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                    `;
+                }
+
+            });
+            console.log(archive);
+            $('#pageTitle').html('Archiwum');
+            $('#news').html('');
+            $('#news').append(archive);
+        }
+
+
         
 
-    </div>
+        var newsCards = news.map(function (o) {
+            return `
+                <div class="card mb-4 box-shadow" style="cursor: pointer;">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal"> ${o.title}</h4>
+                    </div>
+                    <div class="news-card-body" style="display: flex;">
+                        <div class="news-photo">
+                            <img src="photo/${o.photo}" alt="Card image cap">
+                        </div>
+                        <div class="news-content" style="display:block;">
+                            <p class="p-loc">${o.content}</p>
+                            <span class="p-desc">dodano: ${o.date}</span>
+                        </div>
+
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
+                        więcej
+                        </button>
+                        
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">${o.title}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="photo/${o.photo}"  style="max-width:100%" alt="Card image cap">
+                                ${o.content}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">zamknij</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        var leftMenu = news.slice(0, 3).map(function (o) {
+            return `
+            <li onclick="getNewsByMonth(202101)">${o.title}</li>            
+            `;
+        });
+
+        $('#news').append(newsCards);
+        $('#lastNews').append(leftMenu);
+
+
+
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
